@@ -4,8 +4,7 @@ import os
 #from snowflake.snowpark.context import get_active_session
 from snowflake.snowpark.functions import col
 import requests
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
-st.text(smoothiefroot_repsonse)
+
 
 # Write directly to the app
 st.title(f":cup_with_straw: Customize Your Smoothie:cup_with_straw:")
@@ -15,6 +14,9 @@ st.write(
 )
 
 #st.write(st.__version__)
+smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+st.text(smoothiefroot_response)
+
 
 title = st.text_input("Name On Smoothie:")
 #st.write("Smoothie Name is:", title)
