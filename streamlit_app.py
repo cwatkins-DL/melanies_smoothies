@@ -14,12 +14,11 @@ st.write(
 )
 
 #st.write(st.__version__)
-# 1. Cleaned URL string
-smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")  
 
-# 2. Convert the response to a Python dictionary/list and display it nicely
-data = smoothiefroot_response.json()
-st.json(data)
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon") 
+#data = smoothiefroot_response.json()
+#st.json(data)
+sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=true)
 
 
 title = st.text_input("Name On Smoothie:")
